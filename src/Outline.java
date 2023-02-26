@@ -75,6 +75,21 @@ public class Outline {
     List<String> words = getList();
     System.out.println("4:");
     // YOUR CODE
+    // Part a: s -> s + "!"
+    List<String> s1 = words.stream()
+                           .map(s -> s + "!")
+                           .collect( Collectors.toList() );
+    System.out.println( s1 );
+    // Part b: s -> s.replace("i", "eye")
+    List<String> s2 = words.stream()
+                           .map(s -> s.replace("i", "eye"))
+                           .collect( Collectors.toList() );
+    System.out.println( s2 );
+    // Part c: s -> s.toUpperCase()
+    List<String> s3 = words.stream()
+                           .map(s -> s.toUpperCase())
+                           .collect( Collectors.toList() );
+    System.out.println( s3 );
   }
 
   // (*) Turn the strings in the list into uppercase, keep only the
@@ -139,6 +154,7 @@ public class Outline {
     question1();
     question2();
     question3();
+    question4();
 
   }
 }
