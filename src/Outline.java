@@ -27,6 +27,8 @@ public class Outline {
     List<String> words = getList();
     System.out.println("2: ");
     // YOUR CODE
+    Stream<String> sl = words.stream();
+    sl.forEach( System.out::println );
   }
 
   // For each of the following lambda expressions (see Question 5 in Worksheet 2),
@@ -117,6 +119,7 @@ public class Outline {
 
   public static void main(String... args) { // varargs alternative to String[]
     question1();
+    question2();
 
   }
 }
