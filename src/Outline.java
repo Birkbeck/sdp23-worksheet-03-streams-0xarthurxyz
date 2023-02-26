@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -43,6 +44,23 @@ public class Outline {
     List<String> words = getList();
     System.out.println("3:");
     // YOUR CODE
+    // Part a: strings with no more than 3 characters
+    List<String> s1 = words.stream()
+    .filter(s -> s.length() < 4)
+    .collect( Collectors.toList() );
+    System.out.println( s1 );
+    
+    // Part b: strings containing "b"
+    List<String> s2 = words.stream()
+                           .filter(s -> s.contains("b"))
+                           .collect( Collectors.toList() );
+    System.out.println( s2 );
+    
+    // Part c: strings of even length
+    List<String> s3 = words.stream()
+                           .filter(s -> (s.length() % 2) == 0)
+                           .collect( Collectors.toList() );
+    System.out.println( s3 );
   }
 
   // For each of the following lambda expressions (see Question 7 in Worksheet 2),
@@ -120,6 +138,7 @@ public class Outline {
   public static void main(String... args) { // varargs alternative to String[]
     question1();
     question2();
+    question3();
 
   }
 }
