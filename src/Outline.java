@@ -18,7 +18,6 @@ public class Outline {
     // YOUR CODE
     Stream<String> sl = words.stream();
     sl.forEach( s -> System.out.println("  " + s) );
-    ;
   }
 
   // Repeat this problem but without two spaces in front of each word.
